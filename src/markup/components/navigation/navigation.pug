@@ -1,0 +1,16 @@
+mixin navigation(data)
+    block navigation
+        .navigation
+            .navigation__wrapper
+                .navigation__logo
+                    a
+                        img(src="%=static=%img/general/logo.png" alt="logo")
+                block navigation__tabs
+                    ul.navigation__tabs
+                        mixin tabs(tab)
+                            li(class={active: tab.class})
+                                a(href=tab.url )=tab.name
+                        each tab in navigation.tabs
+                            +tabs(tab)
+                .navigation__search
+                    input(type="search" placeholder="поиск по сайту")

@@ -1,0 +1,12 @@
+extends ../layouts/default
+include ../components/navigation/navigation
+
+block vars
+    -pageSettings.title = 'Главная';
+
+block content
+    // Контент здесь
+    - var index = true;
+    +navigation()
+
+
