@@ -1,14 +1,14 @@
 mixin header(data)
-    +b.HEADER.header()&attributes(attributes)
-        .header__wrapper
-            .header__langs
-                mixin langs(lang)
-                        - if (lang.span) {
-                        span=lang.span
-                        - }
-                        a(href=lang.url)=lang.name
-                for lang in header.langs
-                    +langs(lang)
-            .header__log
-                a.scoreboard(href="#") Онлайн-табло
-                a(href="#") Вход и регистрация
+  +b.HEADER.header()&attributes(attributes)
+    .header__wrapper
+      .header__langs
+        mixin langs(lang)
+          - if (lang.span) {
+          span=lang.span
+          - }
+          a(href=lang.url)=lang.name
+        for lang in header.langs
+          +langs(lang)
+      .header__log
+        a.scoreboard(href="#") Онлайн-табло
+        a(href="#") Вход и регистрация
